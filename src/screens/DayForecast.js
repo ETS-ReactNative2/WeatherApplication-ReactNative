@@ -8,7 +8,6 @@ const DayForecast = ({navigation, route}) => {
     const [timezone , setTimezone] = useState(0);
     const [daily, setDaily] = useState(null);
     const [error, setError] = useState(null)
-    const [appIsReady, setAppIsReady] = useState(false);
     const [isRefreshing, setIsRefreshing] = useState(false)
 
     const getDay = (value) => {
