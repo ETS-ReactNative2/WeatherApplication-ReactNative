@@ -3,7 +3,7 @@ import { StyleSheet, ImageBackground } from 'react-native';
 import Main from './src/screens/Main';
 import { NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator} from '@react-navigation/native-stack';
-import DailyForecast from './src/screens/DailyForecast';
+import DayForecast from './src/screens/DayForecast';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,8 +17,8 @@ export default function App() {
         headerShadowVisible: false,
         headerTitleAlign: 'center',
         headerTintColor: 'white'}}>
-        <Stack.Screen name="City" component={Main}/>
-        <Stack.Screen name="DailyForecast" component={DailyForecast}/>
+        <Stack.Screen name="Main" component={Main}  options={{title: ""}}/>
+        <Stack.Screen name="DayForecast" component={DayForecast} options={{title: ""}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
