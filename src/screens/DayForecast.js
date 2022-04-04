@@ -59,12 +59,12 @@ const DayForecast = ({navigation, route}) => {
                 return(
                     <>
                     <View style={Styles.dailyContainer}>
-                        <View style={Styles.row}>
+                    <View style={Styles.row}>
                             <View style={Styles.column}>
                                 <Text style={{color: 'rgb(51, 51, 51)', fontSize: 18, fontWeight: '700'}}>{getDay(new Date(item.dt*1000).getDay())}</Text>
                                 <Text style={{color: 'rgb(81, 81, 81)', fontSize: 22, fontWeight: 'bold'}}>{Math.round(item.temp.max - 273.15)}&deg;&nbsp;&#47;&nbsp;{Math.round(item.temp.min - 273.15)}&deg;</Text>
                             </View>
-                            <View style={Styles.column, {marginLeft: 'auto'}}>
+                            <View style={[Styles.column, {marginLeft: 'auto'}]}>
                                 <CachedImage source = {{uri : `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}} style = {{ width: 60, height: 60 }}/>
                             </View>
                         </View>
@@ -72,7 +72,7 @@ const DayForecast = ({navigation, route}) => {
                             <View style={Styles.column}>
                                 <Text style={{color: 'rgb(81, 81, 81)', fontSize: 18, fontWeight: '500'}}>{item.wind_speed.toFixed(1)} km/h</Text>
                             </View>
-                            <View style={Styles.column, {marginLeft: 'auto'}}>
+                            <View style={[Styles.column, {marginLeft: 'auto'}]}>
                                 <Text style={{color: 'rgb(37, 81, 176)', fontSize: 18, fontWeight: '500'}}>{item.weather[0].main}</Text>
                             </View>
                         </View>
@@ -87,7 +87,6 @@ const DayForecast = ({navigation, route}) => {
 
 const Styles = StyleSheet.create({
     listContainer: {
-        flex: 1,
         margin: 20,
     },
     dailyContainer: {

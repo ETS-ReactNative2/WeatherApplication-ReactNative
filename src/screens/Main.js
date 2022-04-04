@@ -147,6 +147,7 @@ const Main = ({navigation}) => {
                         data={hourly}
                         keyExtractor={item => item.dt}
                         renderItem={({item}) => {
+                            
                             return (
                                 <>
                                 <View style = {Styles.hourlyContainer}>
