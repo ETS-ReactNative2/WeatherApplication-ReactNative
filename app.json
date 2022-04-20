@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "WeatherApplication-ReactNative",
-    "slug": "WeatherApplication-ReactNative",
+    "name": "Weather App RN",
+    "slug": "Weather-App-RN",
     "version": "1.1.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,7 +19,12 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.jerishbovas.weatherapplication",
-      "buildNumber": "1.1.2"
+      "buildNumber": "1.1.2",
+      "infoPlist": {
+        "NSLocationAlwaysUsageDescription": "This app uses location to get the weather data for that area",
+        "NSLocationUsageDescription": "This app uses location to get the weather data for that area",
+        "NSLocationWhenInUseUsageDescription": "This app uses location to get the weather data for that area"
+      }
     },
     "android": {
       "adaptiveIcon": {
